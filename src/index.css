@@ -1,0 +1,175 @@
+/* Import Leaflet CSS for OpenStreetMap */
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Leaflet styles */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.custom-aqi-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+@layer base {
+  :root {
+    /* Light theme as default */
+    --background: 210 20% 98%;       /* very light off-white */
+    --foreground: 215 12% 12%;       /* dark text */
+
+    --card: 210 16% 100%;            /* white cards */
+    --card-foreground: 215 12% 12%;
+
+    --popover: 210 16% 100%;
+    --popover-foreground: 215 12% 12%;
+
+    /* Softer accent colors for light UI */
+    --primary: 212 95% 52%;
+    --primary-foreground: 210 22% 98%;
+
+    --secondary: 215 14% 94%;
+    --secondary-foreground: 215 12% 12%;
+
+    --muted: 210 10% 96%;
+    --muted-foreground: 215 10% 45%;
+
+    --accent: 260 85% 70%;
+    --accent-foreground: 215 12% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 22% 98%;
+
+    /* Subtle borders for light UI */
+    --border: 220 12% 90%;
+    --input: 220 12% 96%;
+    --ring: 212 95% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 16% 98%;
+    --sidebar-foreground: 215 12% 12%;
+    --sidebar-primary: 212 95% 52%;
+    --sidebar-primary-foreground: 210 22% 98%;
+    --sidebar-accent: 215 14% 94%;
+    --sidebar-accent-foreground: 215 12% 12%;
+    --sidebar-border: 220 12% 94%;
+    --sidebar-ring: 212 95% 52%;
+  }
+
+  /* Dark mode variables (opt-in) */
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 280 90% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 20%;
+    --ring: 200 100% 60%;
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 200 100% 60%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 15% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 200 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar styles */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thumb-muted {
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.45);
+    border-radius: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.7);
+  }
+
+  /* Glassmorphism utility */
+  .glass {
+    background: hsl(var(--card) / 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+
+  .glass-strong {
+    background: hsl(var(--card) / 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid hsl(var(--border) / 0.85);
+  }
+
+  /* Luminous glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+  }
+
+  /* AI-inspired gradients */
+  .ai-gradient {
+    background: linear-gradient(135deg, #7dd3fc 0%, #a78bfa 50%, #fbcfe8 100%);
+  }
+
+  .ai-gradient-text {
+    background: linear-gradient(135deg, #00bfff 0%, #a855f7 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
