@@ -1,4 +1,4 @@
-# 🌍 Atmosphere Analyzer (AirWatch Pro)
+# 🌍 SkyQuery chat
 
 [![NASA TEMPO](https://img.shields.io/badge/NASA%20TEMPO-Satellite%20Data-0B3D91?logo=nasa&logoColor=white)](https://tempo.si.edu/)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
