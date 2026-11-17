@@ -38,7 +38,7 @@
 
 ## 🔍 Project Overview
 
-**Atmosphere Analyzer** is an AI-powered air quality monitoring dashboard built to transform atmospheric Earth observation data into actionable public health intelligence.
+**Sky Query chat** is an AI-powered air quality monitoring dashboard built to transform atmospheric Earth observation data into actionable public health intelligence.
 
 ### Key Highlights:
 - **Zero-Config First Run**: Includes an intelligent mock/fallback data engine. You can clone the repo and run it immediately **without needing any API keys**.
